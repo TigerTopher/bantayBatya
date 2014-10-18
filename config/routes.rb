@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-
-
+  get 'about' => 'static_pages#about'
+  get 'further_actions' => 'questions#further_actions'
+  get 'calculate' => 'questions#input'
+  post 'api' => 'questions#api'
+  get 'howto' => 'static_pages#howto'
+  get 'need' => 'static_pages#need'
   post 'compute' => 'questions#compute'
   resources :questions
 
